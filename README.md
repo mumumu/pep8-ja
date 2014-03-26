@@ -9,7 +9,7 @@ https://github.com/mumumu/pep8-ja/blob/master/index.rst
 
 ### 既に日本語訳なかったっけ？
 
-INADA Naoki さん ( [@methane](https://twitter.com/methane) ) さんの[翻訳](https://dl.dropboxusercontent.com/u/555254/pep-0008.ja.html)があるのは承知していたが、以下の点を改善したかった。
+INADA Naoki ( [@methane](https://twitter.com/methane) ) さんの[翻訳](https://dl.dropboxusercontent.com/u/555254/pep-0008.ja.html)があるのは承知していたが、以下の点を改善したかった。
 
 - 誤訳が割とあったので減らしたかった
 - ただ翻訳するだけではなく、Github に置くことで皆が文句を付けやすい状態にする
