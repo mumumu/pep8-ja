@@ -3,7 +3,7 @@
 Pythonコードの「スタイルガイド」としてよく知られている [PEP8](http://hg.python.org/peps/file/tip/pep-0008.txt) を日本語に翻訳したものです。  
 翻訳自体は、以下をどうぞ。
 
-https://github.com/mumumu/pep8-ja/blob/master/index.rst
+http://pep8-ja.readthedocs.org/ja/latest/
 
 誤訳 や typoの指摘、その他のフィードバックは Pull Request を宜しくお願いします。
 
