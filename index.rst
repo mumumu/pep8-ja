@@ -13,9 +13,6 @@
 | X-Original-Text: http://hg.python.org/peps/file/380301e300a6/pep-0008.txt
 | X-Translator: Yoshinari Takaoka <reversethis -> gro tod umumum ta umumum>
 
-PEP8 日本語訳
-=============
-
 はじめに
 ============
 
