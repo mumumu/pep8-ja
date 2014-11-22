@@ -303,6 +303,23 @@ import
       良い: if x == 4: print x, y; x, y = y, x
       悪い: if x == 4 : print x , y ; x , y = y , x
 
+- しかし、スライスではコロンは二項演算子のように振る舞います。よって、(コロンは優先度が最も低い演算子として扱われるので)両側に同じ数(訳注: 無しでも可だと思われる)のスペースを置くべきです。拡張スライスでは、両側に同じ数のスペースを置かなければなりません。例外: スライスのパラメータが省略された場合は、スペースも省略されます。
+
+  良い::
+
+      ham[1:9], ham[1:9:3], ham[:9:3], ham[1::3], ham[1:9:]
+      ham[lower:upper], ham[lower:upper:], ham[lower::step]
+      ham[lower+offset : upper+offset]
+      ham[: upper_fn(x) : step_fn(x)], ham[:: step_fn(x)]
+      ham[lower + offset : upper + offset]
+
+  悪い::
+
+      ham[lower + offset:upper + offset]
+      ham[1: 9], ham[1 :9], ham[1:9 :3]
+      ham[lower : : upper]
+      ham[ : upper]
+
 - 関数呼び出しの引数リストをはじめる開き括弧の直前::
 
       良い: spam(1)
