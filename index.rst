@@ -327,8 +327,8 @@ import
 
 - インデックスやスライスの開き括弧の直前::
 
-      良い: dict['key'] = list[index]
-      悪い: dict ['key'] = list [index]
+      良い: dct['key'] = lst[index]
+      悪い:  dct ['key'] = lst [index]
 
 - 代入(や他の)演算子を揃えるために、演算子の周囲に1つ以上のスペースを入れる
 
