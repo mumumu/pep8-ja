@@ -390,6 +390,21 @@ Python では、単一引用符 ``'`` で囲まれた文字列と、二重引用
       def complex(real, imag = 0.0):
           return magic(r = real, i = imag)
 
+- アノテーションを使った関数定義では、 ``=`` の両側にスペースを必ず入れるようにしてください。 ``:`` の後ろにもスペースを一ついれるようにします。 戻り値アノテーションの ``->`` 演算子の両側にも同様にスペースをひとつ入れるようにします。
+
+  良い::
+  
+      def munge(input: AnyStr):
+      def munge(sep: AnyStr = None):
+      def munge() -> AnyStr:
+      def munge(input: AnyStr, sep: AnyStr = None, limit=1000):
+
+  悪い::
+  
+      def munge(input: AnyStr=None):
+      def munge(input:AnyStr):
+      def munge(input: AnyStr)->PosInt:
+
 - 複合文 (一行に複数の文を入れること) は一般的に推奨されません。
 
   良い::
