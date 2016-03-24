@@ -895,20 +895,7 @@ PEP 484 が採用されたので、関数アノテーションに関するスタ
 
 - 型チェックを望まない人は、無視することも自由です。しかし、サードパーティーライブラリパッケージのユーザーは、パッケージに対して型チェックを実行したいと思うかもしれません。こうした目的で、PEP 484 はスタブファイル、つまり、対応する .py ファイルの設定に応じて型チェッカーが読み取る .pyi ファイルを使うことを推奨しています。 スタブファイルはライブラリとともに配布することもできますし、(ライブラリの作者の許可を得て) typeshed repo [4]_ でパッケージとは別に配布することもできます。
 
-- 後方互換性を保つ必要があるコード向けに、関数アノテーションはコメントの形で追加することもできます。基本的に、Python 3 の関数アノテーションは以下のような書き方ですが::
-
-    def embezzle(self, account: str, funds: int = 1000000, **fake_receipts: str) -> None:
-        """Embezzle funds from account using fake receipts."""
-        <code goes here>
-
-これは以下と同等です::
-
-    def embezzle(self, account, funds=1000000, **fake_receipts):
-        # type: (str, int, **str) -> None
-        """Embezzle funds from account using fake receipts."""
-        <code goes here>
-
-mypy 型チェッカー [5]_ が今のところこの記法をサポートしていますし、他の型チェッカーもこれに追随することが推奨されます。
+- 後方互換性を保つ必要があるコード向けに、関数アノテーションはコメントの形で追加することもできます。PEP 484 の関連する箇所も参照してください。 [5]_
 
 .. rubric:: 脚注
 
@@ -927,9 +914,8 @@ mypy 型チェッカー [5]_ が今のところこの記法をサポートして
 .. [4] Typeshed repo
    https://github.com/python/typeshed
 
-.. [5] mypy type checker
-   http://mypy-lang.org
-   https://github.com/JukkaL/mypy
+.. [5] Suggested syntax for Python 2.7 and straddling code
+   https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code
 
 著作権
 =========
