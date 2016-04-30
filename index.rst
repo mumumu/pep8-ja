@@ -10,7 +10,7 @@
 | Content-Type: text/x-rst
 | Created: 05-Jul-2001
 | Post-History: 05-Jul-2001, 01-Aug-2013
-| X-Original-Text: http://hg.python.org/peps/file/380301e300a6/pep-0008.txt
+| X-Original-Text: https://hg.python.org/peps/file/tip/pep-0008.txt
 | X-Translator: Yoshinari Takaoka <reversethis -> gro tod umumum ta umumum>
 
 はじめに
