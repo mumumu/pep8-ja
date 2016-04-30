@@ -118,6 +118,7 @@ Guido の重要な洞察のひとつに、コードは書くよりも読まれ�
             and that_is_another_thing):
         do_something()
 
+(後述しますが、2項演算子の前で改行すべきか、後で改行すべきかについての議論も参照してください)
 
 行を継続して 波括弧/ブラケット/括弧 を閉じる時は、「リストの最後の要素が置かれた行の、はじめのホワイトスペースでない文字の直下」に閉じる記号を置いても構いません。次のようにします::
 
@@ -183,18 +184,28 @@ Python の標準ライブラリは保守的なので、1行の文字数は79文�
 
 バックスラッシュを使うのが好ましい別のケースとして ``assert`` 文を使う場合が挙げられます。
 
-必ず、行を継続させた場合はインデントを適切に行うようにしてください。2項演算子の周囲で改行する望ましい場所は、演算子の前ではなく *後* です。例を示します::
- 
+必ず、行を継続させた場合はインデントを適切に行うようにしてください。
+
+
+2項演算子の前で改行すべきか、後で改行すべきか?
+----------------------------------------------
+
+数十年の間、2項演算子の後で改行するスタイルが推奨されていました。しかし、Donald Knuth は、自らの組版に関する最近の研究論文の中で、2項演算子の *前* で改行すべきというという説を明らかにしました。よって、プロジェクト内で統一されていれば、2項演算子の前後どちらで改行しても構いません。新しいコードでは、Knuth のスタイルをお勧めします。
+
+2項演算子の前で改行するコードの例をいくつか示します::
+
     class Rectangle(Blob):
 
         def __init__(self, width, height,
                      color='black', emphasis=None, highlight=0):
-            if (width == 0 and height == 0 and
-                    color == 'red' and emphasis == 'strong' or
-                    highlight > 100):
+            if (width == 0
+                and height == 0
+                and color == 'red'
+                and emphasis == 'strong'
+                or highlight > 100):
                 raise ValueError("sorry, you lose")
-            if width == 0 and height == 0 and (color == 'red' or
-                                               emphasis is None):
+            if (width == 0 and height == 0
+                and (color == 'red' or emphasis is None)):
                 raise ValueError("I don't think so -- values are %s, %s" %
                                  (width, height))
             Blob.__init__(self, width, height,
@@ -540,7 +551,7 @@ Python のライブラリで採用されている命名規約はちょっと面�
 - ``lower_case_with_underscores``
 - ``UPPERCASE``
 - ``UPPER_CASE_WITH_UNDERSCORES``
-- ``CapitalizedWords`` (CapWords, または CamelCase - 文字がデコボコに見えることからこう呼ばれます [3]_)。studlyCaps という呼び名でも知られています。
+- ``CapitalizedWords`` (CapWords, または CamelCase - 文字がデコボコに見えることからこう呼ばれます [4]_)。studlyCaps という呼び名でも知られています。
 
   注意: CapWords のやり方で略語を使う場合、省略した単語の全ての文字を大文字にします。つまりこのやり方だと、HttpServerError より HTTPServerError の方が良いということになります。
 - ``mixedCase`` (はじめの文字が小文字である点が、CapitalizedWords と違います！)
@@ -893,9 +904,9 @@ PEP 484 が採用されたので、関数アノテーションに関するスタ
 
 - linter や 型チェックプログラム のようなツールは Pythonインタプリタ とは別のツールですし、使うかどうかも任意です。Pythonインタプリタは、デフォルトでは型チェックによるメッセージを表示しませんし、アノテーションによって振る舞いを変えることもありません。
 
-- 型チェックを望まない人は、無視することも自由です。しかし、サードパーティーライブラリパッケージのユーザーは、パッケージに対して型チェックを実行したいと思うかもしれません。こうした目的で、PEP 484 はスタブファイル、つまり、対応する .py ファイルの設定に応じて型チェッカーが読み取る .pyi ファイルを使うことを推奨しています。 スタブファイルはライブラリとともに配布することもできますし、(ライブラリの作者の許可を得て) typeshed repo [4]_ でパッケージとは別に配布することもできます。
+- 型チェックを望まない人は、無視することも自由です。しかし、サードパーティーライブラリパッケージのユーザーは、パッケージに対して型チェックを実行したいと思うかもしれません。こうした目的で、PEP 484 はスタブファイル、つまり、対応する .py ファイルの設定に応じて型チェッカーが読み取る .pyi ファイルを使うことを推奨しています。 スタブファイルはライブラリとともに配布することもできますし、(ライブラリの作者の許可を得て) typeshed repo [5]_ でパッケージとは別に配布することもできます。
 
-- 後方互換性を保つ必要があるコード向けに、関数アノテーションはコメントの形で追加することもできます。PEP 484 の関連する箇所も参照してください。 [5]_
+- 後方互換性を保つ必要があるコード向けに、関数アノテーションはコメントの形で追加することもできます。PEP 484 の関連する箇所も参照してください。 [6]_
 
 .. rubric:: 脚注
 
@@ -909,12 +920,14 @@ PEP 484 が採用されたので、関数アノテーションに関するスタ
 .. [2] Barry's GNU Mailman style guide
        http://barry.warsaw.us/software/STYLEGUIDE.txt
 
-.. [3] http://www.wikipedia.com/wiki/CamelCase
+.. [3] http://rhodesmill.org/brandon/slides/2012-11-pyconca/#laying-down-the-law
 
-.. [4] Typeshed repo
+.. [4] http://www.wikipedia.com/wiki/CamelCase
+
+.. [5] Typeshed repo
    https://github.com/python/typeshed
 
-.. [5] Suggested syntax for Python 2.7 and straddling code
+.. [6] Suggested syntax for Python 2.7 and straddling code
    https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code
 
 著作権
