@@ -296,10 +296,27 @@ import
 
   名前をこのやり方で再公開する場合でも、公開インターフェイスと内部インターフェイスに関するガイドラインは有効です。
 
-Dunder変数
-----------------
+モジュールレベルの二重アンダースコア変数名
+------------------------------------------
 
-全ての関連する dunder変数 (訳注: dunder=Double UNDERscore のこと。変数名の前後にアンダースコアが2つ付いている変数) (例: ``__all__``, ``__author__``, ``__version__``, など) は、モジュールに関する docstring の後、そして あらゆるimport文の前に置き、前後に1行スペースを置くべきです。
+``__all__``, ``__author__``, ``__version__`` のような、モジュールレベルの "二重アンダースコア変数" (変数名の前後にアンダースコアが2つ付いている変数)  は、モジュールに関する docstring の後、そして ``from __future__`` *以外の* あらゆるimport文の前に置くべきです。Python はfutureインポートを、docstring 以外のあらゆるコードの前に置くように強制します。
+
+例::
+
+    """This is the example module.
+
+    This module does stuff.
+    """
+
+    from __future__ import barry_as_FLUFL
+
+    __all__ = ['a', 'b', 'c']
+    __version__ = '0.1'
+    __author__ = 'Cardinal Biggles'
+
+    import os
+    import sys
+
 
 文字列に含まれる引用符
 ======================
