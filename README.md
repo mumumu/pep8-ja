@@ -1,6 +1,6 @@
 # PEP8 日本語版
 
-Pythonコードの「スタイルガイド」としてよく知られている [PEP8](http://hg.python.org/peps/file/tip/pep-0008.txt) を日本語に翻訳したものです。  
+Pythonコードの「スタイルガイド」としてよく知られている [PEP8](https://github.com/python/peps/blob/master/pep-0008.txt) を日本語に翻訳したものです。  
 翻訳自体は、以下をどうぞ。
 
 http://pep8-ja.readthedocs.org/ja/latest/
