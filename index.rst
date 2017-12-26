@@ -600,7 +600,7 @@ Python のライブラリで採用されている命名規約はちょっと面�
 - ``UPPER_CASE_WITH_UNDERSCORES``
 - ``CapitalizedWords`` (CapWords, または CamelCase - 文字がデコボコに見えることからこう呼ばれます [4]_)。studlyCaps という呼び名でも知られています。
 
-  注意: CapWords のやり方で略語を使う場合、省略した単語の全ての文字を大文字にします。つまりこのやり方だと、HttpServerError より HTTPServerError の方が良いということになります。
+  注意: CapWords の中で頭字語 [#fn-hu]_ を含める場合、頭字語の全ての文字を大文字にします。つまりこのやり方だと、HttpServerError より HTTPServerError の方が良いということになります。
 - ``mixedCase`` (はじめの文字が小文字である点が、CapitalizedWords と違います！)
 - ``Capitalized_Words_With_Underscores`` (醜い！)
 
@@ -974,6 +974,8 @@ PEP 484 が採用されたので、関数アノテーションに関するスタ
 .. rubric:: 脚注
 
 .. [#fn-hi] *突き出しインデント* は、はじめの行以外の全ての行をインデントするDTPのやり方です。Python の文脈では、括弧で囲む文の開き括弧を行の終わりに置いて、残りの行を閉じ括弧までインデントするスタイルのことを言います。
+
+.. [#fn-hu] 頭字語は、NATO (=North Atlantic Treaty Organization 北大西洋条約機構) のように、頭文字を並べたものがひとつの単語として扱われているものです。個々の頭文字をアルファベットとして発音するもの (例: U.S = United States) は該当しないとされています。
 
 参考文献
 ==========
