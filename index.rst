@@ -598,7 +598,7 @@ Python のライブラリで採用されている命名規約はちょっと面�
 - ``lower_case_with_underscores``
 - ``UPPERCASE``
 - ``UPPER_CASE_WITH_UNDERSCORES``
-- ``CapitalizedWords`` (CapWords, または CamelCase - 文字がデコボコに見えることからこう呼ばれます [4]_)。studlyCaps という呼び名でも知られています。
+- ``CapitalizedWords`` (CapWords, または CamelCase - 文字がデコボコに見えることからこう呼ばれます [4]_)。StudlyCaps という呼び名でも知られています。
 
   注意: CapWords の中で頭字語 [#fn-hu]_ を含める場合、頭字語の全ての文字を大文字にします。つまりこのやり方だと、HttpServerError より HTTPServerError の方が良いということになります。
 - ``mixedCase`` (はじめの文字が小文字である点が、CapitalizedWords と違います！)
