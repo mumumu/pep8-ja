@@ -9,13 +9,15 @@ http://pep8-ja.readthedocs.org/ja/latest/
 
 ### 既に日本語訳なかったっけ？
 
-INADA Naoki ( [@methane](https://twitter.com/methane) ) さんの[翻訳](https://dl.dropboxusercontent.com/u/555254/pep-0008.ja.html)があるのは承知していたが、以下の点を改善したかった。
+INADA Naoki ( [@methane](https://twitter.com/methane) ) さんの翻訳(\*注1) があるのは承知していたが、以下の点を改善したかった。
 
 - 誤訳が割とあったので減らしたかった
 - ただ翻訳するだけではなく、Github に置くことで皆が文句を付けやすい状態にする
 - 技術文書の翻訳によくありがちな批判「訳古いんで原文見た方がマシ」問題にできるだけ対処する
  - [更新は見張って](https://github.com/python/peps/commits/master/pep-0008.txt) できるだけ維持する
  - そんなに更新頻度高くないし。できるだけ頑張る。たぶん。
+
+(\*注1) Dropbox の公開フォルダに置かれていたが、[公開フォルダ機能の廃止](https://www.dropbox.com/help/files-folders/public-folder) に伴い、現在は参照できなくなっている
 
 ## 謝辞
 
