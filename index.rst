@@ -63,7 +63,7 @@ Guido の重要な洞察のひとつに、コードは書くよりも読まれ�
     foo = long_function_name(var_one, var_two,
                              var_three, var_four)
 
-    # この行とそれ以外を区別するため、インデントを加える場合
+    # 引数とそれ以外を区別するため、スペースを4つ(インデントをさらに)加える
     def long_function_name(
             var_one, var_two, var_three,
             var_four):
