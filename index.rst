@@ -943,6 +943,15 @@ importされた名前は、常に実装の詳細を表現していると見な�
       悪い:      if greeting == True:
       もっと悪い: if greeting is True:
 
+- ``try...finally`` の組み合わせの中で、finally の外に脱出する制御構文 ``return``/``break``/``continue`` を使うのは推奨されません。なぜなら、このような構文は暗黙のうちに finally の中から伝播する例外を暗黙のうちにキャンセルしてしまうからです。
+
+ 悪い::
+
+     def foo():
+         try:
+             1 / 0
+         finally:
+             return 42
 
 関数アノテーション
 ------------------
