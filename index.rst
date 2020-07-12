@@ -654,7 +654,7 @@ X11ライブラリは、公開されている関数全てに「X」を付けて�
 
 - ``single_trailing_underscore_``: Python のキーワードと衝突するのを避けるために使われる規約です。例を以下に挙げます::
 
-      Tkinter.Toplevel(master, class_='ClassName')
+      tkinter.Toplevel(master, class_='ClassName')
 
 - ``__double_leading_underscore``: クラスの属性に名前を付けるときに、名前のマングリング機構を呼び出します (クラス Foobar の ``__boo`` という名前は ``_FooBar__boo`` になります。以下も参照してください)
 
