@@ -612,7 +612,10 @@ Python では、単一引用符 ``'`` で囲まれた文字列と、二重引用
       Optional plotz says to frobnicate the bizbaz first.
       """
 
-- docstring が1行で終わる場合は、同じ行を ``"""`` で閉じるようにしてください。
+- docstring が1行で終わる場合は、同じ行を ``"""`` で閉じるようにしてください::
+
+      """Return an ex-parrot."""
+
 
 命名規約
 ==================
