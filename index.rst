@@ -375,7 +375,7 @@ Python では、単一引用符 ``'`` で囲まれた文字列と、二重引用
       # 間違い:
       ham[lower + offset:upper + offset]
       ham[1: 9], ham[1 :9], ham[1:9 :3]
-      ham[lower : : upper]
+      ham[lower : : step]
       ham[ : upper]
 
 - 関数呼び出しの引数リストをはじめる開き括弧の直前::
