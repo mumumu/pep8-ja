@@ -4,7 +4,7 @@
 | Last-Modified: $Date$
 | Author: Guido van Rossum <guido@python.org>,
 |        Barry Warsaw <barry@python.org>,
-|        Nick Coghlan <ncoghlan@gmail.com>
+|        Alyssa Coghlan <ncoghlan@gmail.com>
 | Status: Active
 | Type: Process
 | Content-Type: text/x-rst
