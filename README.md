@@ -23,3 +23,4 @@ INADA Naoki ( [@methane](https://twitter.com/methane) ) さんの翻訳(\*注1) 
 
 INADA Naoki さんの翻訳を一部参考にさせて頂きました。  
 この場を借りて御礼申し上げます。
+
