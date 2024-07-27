@@ -229,14 +229,6 @@ Python の標準ライブラリは保守的なので、1行の文字数は79文�
              - ira_deduction
              - student_loan_interest)
 
-     # 正しい:
-     # 演算子とオペランドを一致させやすい
-     income = (gross_wages
-               + taxable_interest
-               + (dividends - qualified_dividends)
-               - ira_deduction
-               - student_loan_interest)
-
 Python のコードでは、プロジェクトの内部で統一されているのであれば、2項演算子の前後どちらででも改行して構いません。新しいコードでは、Knuth のスタイルをお勧めします。
 
 
