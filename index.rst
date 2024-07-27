@@ -1228,7 +1228,7 @@ importされた名前は、常に実装の詳細を表現していると見な�
 
 .. [3] Donald Knuth's *The TeXBook*, pages 195 and 196.
 
-.. [4] http://www.wikipedia.com/wiki/CamelCase
+.. [4] http://www.wikipedia.com/wiki/Camel_case
 
 .. [5] Typeshed repo
    https://github.com/python/typeshed
